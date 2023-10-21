@@ -12,6 +12,10 @@ const palabras = [
   "murcielago",
 ];
 const btn = id("jugar");
+const btn_letras = document.querySelectorAll("#letras button");
+const imagen = id("imagen");
+
+//click en iniciar juego
 btn.addEventListener("click", iniciar);
 
 console.log(btn);
@@ -30,12 +34,12 @@ function iniciar(event) {
   console.log(palabrita);
   const cant_letras = palabrita.length;
 
+  //click de adivinar letra
   for (let i = 0; i < cant_letras; i++) {
     const span = document.createElement("span");
     parrafo.appendChild(span);
   }
 
-  const btn_letras = document.querySelectorAll("#letras button");
   btn_letras.forEach(function (button) {
     button.addEventListener("click", function () {
       click_letras(button);
@@ -71,16 +75,25 @@ function click_letras(button) {
   if (acerto == false) {
     cant_errores++;
     const source = `img/img${cant_errores}.png`;
-    const imagen = id("imagen");
     imagen.src = source;
   }
 
   if (cant_errores == 7) {
-    alert("Lo siento, has perdido, la palabra es " + palabrita);
+    id("resultado").innerHTML =
+      "Lo siento, has perdido, la palabra es " + palabrita;
+    game_over();
   } else if (cant_aciertos == palabrita.length) {
-    alert("¡Enhorabuena, has ganado!");
+    id("resultado").innerHTML = "¡Has ganado!";
+    game_over();
   }
   console.log(
     "La letra " + letra + " en la palabra " + palabrita + " ¿existe?: " + acerto
   );
+}
+//fin del juego
+function game_over() {
+  for (let i = 0; i < btn_letras.length; i++) {
+    btn_letras[i].disabled = true;
+  }
+  btn.disabled = false;
 }
