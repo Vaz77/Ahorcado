@@ -52,6 +52,7 @@ function iniciar() {
 btn_letras.forEach(function (button) {
   button.addEventListener("click", function () {
     click_letras(button);
+    button.classList.add("seleccionada");
   });
 });
 
@@ -117,6 +118,11 @@ function game_over() {
 function reiniciarJuego() {
   // Elimina el evento "reiniciarJuego" del botón para evitar duplicados
   btn.removeEventListener("click", reiniciarJuego);
+
+  // Elimina la clase "seleccionada" de todos los botones de letras
+  btn_letras.forEach(function (button) {
+    button.classList.remove("seleccionada");
+  });
 
   for (let i = 0; i < btn_letras.length; i++) {
     btn_letras[i].disabled = false;
