@@ -12,6 +12,16 @@ const palabras = [
   "twicht",
   "murcielago",
 ];
+const pistas = [
+  "Fruta roja y deliciosa.",
+  "Prenda de vestir común.",
+  "Dulces y deliciosos.",
+  "Un tipo de pasta.",
+  "Persona que transmite en línea.",
+  "Plataforma de transmisión en vivo.",
+  "Un mamífero volador nocturno.",
+];
+
 const btn = id("jugar");
 const btn_letras = document.querySelectorAll("#letras button");
 const imagen = id("imagen");
@@ -36,7 +46,9 @@ function iniciar() {
   const valor_al_azar = obtener_random(0, cant_palabras);
 
   palabrita = palabras[valor_al_azar];
+  const pista = pistas[valor_al_azar];
   console.log(palabrita);
+  id("pista").textContent = "Pista: " + pista;
   const cant_letras = palabrita.length;
 
   for (let i = 0; i < btn_letras.length; i++) {

@@ -41,7 +41,7 @@ main {
 }
 
 #palabra_a_adivinar span {
-  color: #ffffff;
+  color: #000000;
   font-size: 24px;
   border-bottom: 2px solid #333;
   width: 30px;
@@ -101,4 +101,8 @@ main {
 
 #resultado {
   color: rgb(255, 242, 0);
+}
+
+.pista {
+  color: rgb(255, 255, 255);
 }
