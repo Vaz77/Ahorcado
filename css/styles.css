@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url(./img/fondoTerror1.jpg);
+  background-image: url(../img/fondoTerror1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Nosifer", sans-serif;
@@ -36,6 +36,9 @@ main {
   height: auto;
 }
 
+.imagenAhorcado {
+  border-radius: 10px;
+}
 #palabra_a_adivinar {
   height: 3em;
 }
@@ -63,6 +66,12 @@ main {
   height: 38px;
   padding: 6px 0;
   text-align: center;
+  box-shadow: 2px 1px 2px rgb(255, 0, 0);
+  transition: transform 0.2s;
+}
+
+#letras button:hover {
+  transform: scale(1.1);
 }
 
 .letra {
@@ -96,7 +105,8 @@ main {
 }
 
 .botonPalabra:disabled {
-  background-color: #ccc !important;
+  background-color: #000000 !important;
+  color: rgb(105, 0, 0);
 }
 
 #resultado {
@@ -105,6 +115,16 @@ main {
 
 .pista {
   color: rgb(255, 255, 255);
+  margin-top: 5em;
+}
+
+.generalInicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
 }
 
 .general {
@@ -168,6 +188,13 @@ main {
     padding: 5px 0;
   }
 
+  .generalInicio {
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow-y: hidden;
+  }
+
   .general {
     align-items: center;
     height: 100%;
@@ -175,5 +202,21 @@ main {
 
   #palabra_a_adivinar span {
     color: white;
+  }
+
+  .tituloInicio {
+    font-size: 45px;
+  }
+
+  .botonInicio {
+    margin-top: 5.5em;
+  }
+
+  .botonInfo {
+    margin-bottom: 5em;
+  }
+
+  #palabra_a_adivinar {
+    margin-bottom: 3.5em;
   }
 }

@@ -5,16 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" type="image/png" href="./img/iconoSoga.png">
     <link
       href="https://fonts.googleapis.com/css?family=Nosifer&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="funciones.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/funciones.js"></script>
     <title>Ahorcado</title>
   </head>
   <body>
-    <audio id="audioAhorcado" src="/audio/cuervos.mp3"></audio>
+    <audio id="audioAhorcado" src="./audio/cuervos.mp3"></audio>
+    <audio id="audioVictoria">
+      <source src="./audio/audioVictoria.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="audioTension">
+      <source src="./audio/audioTension.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="audioDerrota">
+      <source src="./audio/audioDerrota.mp3" type="audio/mpeg" />
+    </audio>
     <div class="general">
       <header>
         <h1>Ahorcado</h1>
@@ -23,12 +33,16 @@
         <img
           id="imagen"
           class="imagenAhorcado"
-          src="img/img0.png"
+          src="/img/img0.png"
           alt="ahorcado1"
         />
         <div>
           <p id="palabra_a_adivinar"></p>
-          <button id="jugar" class="botonPalabra botonColor">
+          <button
+            id="jugar"
+            class="botonPalabra botonColor"
+            onclick="reproducirAudioTension()"
+          >
             Obtener palabra
           </button>
           <p id="resultado"></p>
@@ -71,6 +85,6 @@
         audioAhorcado.play();
       });
     </script>
-    <script src="juego.js"></script>
+    <script src="./js/juego.js"></script>
   </body>
 </html>
