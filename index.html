@@ -14,49 +14,63 @@
     <title>Ahorcado</title>
   </head>
   <body>
-    <header>
-      <h1>Ahorcado</h1>
-    </header>
-    <main>
-      <img id="imagen" class="imagenAhorcado" src="img/img0.png" alt="ahorcado1" />
-      <div>
-        <p id="palabra_a_adivinar"></p>
-        <button id="jugar" class="botonPalabra botonColor">
-          Obtener palabra
-        </button>
-        <p id="resultado"></p>
-        <div id="letras">
-          <button class="letra">a</button>
-          <button class="letra">b</button>
-          <button class="letra">c</button>
-          <button class="letra">d</button>
-          <button class="letra">e</button>
-          <button class="letra">f</button>
-          <button class="letra">g</button>
-          <button class="letra">h</button>
-          <button class="letra">i</button>
-          <button class="letra">j</button>
-          <button class="letra">k</button>
-          <button class="letra">l</button>
-          <button class="letra">m</button>
-          <button class="letra">n</button>
-          <button class="letra">ñ</button>
-          <button class="letra">o</button>
-          <button class="letra">p</button>
-          <button class="letra">q</button>
-          <button class="letra">r</button>
-          <button class="letra">s</button>
-          <button class="letra">t</button>
-          <button class="letra">u</button>
-          <button class="letra">v</button>
-          <button class="letra">w</button>
-          <button class="letra">x</button>
-          <button class="letra">y</button>
-          <button class="letra">z</button>
+    <audio id="audioAhorcado" src="/audio/cuervos.mp3"></audio>
+    <div class="general">
+      <header>
+        <h1>Ahorcado</h1>
+      </header>
+      <main>
+        <img
+          id="imagen"
+          class="imagenAhorcado"
+          src="img/img0.png"
+          alt="ahorcado1"
+        />
+        <div>
+          <p id="palabra_a_adivinar"></p>
+          <button id="jugar" class="botonPalabra botonColor">
+            Obtener palabra
+          </button>
+          <p id="resultado"></p>
+          <div id="letras">
+            <button class="letra">a</button>
+            <button class="letra">b</button>
+            <button class="letra">c</button>
+            <button class="letra">d</button>
+            <button class="letra">e</button>
+            <button class="letra">f</button>
+            <button class="letra">g</button>
+            <button class="letra">h</button>
+            <button class="letra">i</button>
+            <button class="letra">j</button>
+            <button class="letra">k</button>
+            <button class="letra">l</button>
+            <button class="letra">m</button>
+            <button class="letra">n</button>
+            <button class="letra">ñ</button>
+            <button class="letra">o</button>
+            <button class="letra">p</button>
+            <button class="letra">q</button>
+            <button class="letra">r</button>
+            <button class="letra">s</button>
+            <button class="letra">t</button>
+            <button class="letra">u</button>
+            <button class="letra">v</button>
+            <button class="letra">w</button>
+            <button class="letra">x</button>
+            <button class="letra">y</button>
+            <button class="letra">z</button>
+          </div>
+          <p id="pista" class="pista"></p>
         </div>
-        <p id="pista" class="pista"></p>
-      </div>
-    </main>
+      </main>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const audioAhorcado = document.getElementById("audioAhorcado");
+        audioAhorcado.play();
+      });
+    </script>
     <script src="juego.js"></script>
   </body>
 </html>

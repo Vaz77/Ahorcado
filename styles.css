@@ -41,7 +41,7 @@ main {
 }
 
 #palabra_a_adivinar span {
-  color: #000000;
+  color: #ffffff;
   font-size: 24px;
   border-bottom: 2px solid #333;
   width: 30px;
@@ -105,4 +105,75 @@ main {
 
 .pista {
   color: rgb(255, 255, 255);
+}
+
+.general {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.botonInicio {
+  color: red;
+  margin-bottom: 2em;
+  font-size: 30px;
+  text-decoration: none;
+  animation: movimientoBoton 1s infinite alternate;
+}
+
+@keyframes movimientoBoton {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(10px, 0);
+  }
+}
+
+.botonInfo {
+  color: rgb(255, 255, 255);
+  margin-bottom: 2em;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.tituloInicio {
+  font-size: 90px;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+
+  main {
+    width: 90%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  #letras button {
+    width: 40px;
+    height: 40px;
+    padding: 5px 0;
+  }
+
+  .general {
+    align-items: center;
+    height: 100%;
+  }
+
+  #palabra_a_adivinar span {
+    color: white;
+  }
 }
