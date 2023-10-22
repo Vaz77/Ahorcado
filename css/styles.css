@@ -5,6 +5,7 @@ body {
   background-repeat: no-repeat;
   font-family: "Nosifer", sans-serif;
   height: 100vh;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 header {
@@ -38,6 +39,8 @@ main {
 
 .imagenAhorcado {
   border-radius: 10px;
+  width: 50em;
+  height: 60em;
 }
 #palabra_a_adivinar {
   height: 3em;
@@ -102,6 +105,7 @@ main {
   cursor: pointer;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   font-family: "Nosifer", sans-serif;
+  margin-top: 2em;
 }
 
 .botonPalabra:disabled {
@@ -142,6 +146,7 @@ main {
   font-size: 30px;
   text-decoration: none;
   animation: movimientoBoton 1s infinite alternate;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 @keyframes movimientoBoton {
@@ -158,10 +163,12 @@ main {
   margin-bottom: 2em;
   font-size: 25px;
   text-decoration: none;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 .tituloInicio {
   font-size: 90px;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 @media (max-width: 768px) {
@@ -176,6 +183,7 @@ main {
     width: 90%;
     height: 100%;
     flex-direction: column;
+    margin-top: -2em;
   }
 
   h1 {
@@ -217,6 +225,6 @@ main {
   }
 
   #palabra_a_adivinar {
-    margin-bottom: 3.5em;
+    margin-bottom: 4em;
   }
 }

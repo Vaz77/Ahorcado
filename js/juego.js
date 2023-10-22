@@ -46,7 +46,7 @@ const palabras = [
   "isla",
   "leer",
   "poesía",
-  "océano",
+  "oceano",
   "fotografía",
   "tecnología",
 ];
