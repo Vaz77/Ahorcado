@@ -17,9 +17,9 @@ const palabras = [
   "aventura",
   "dinero",
   "naturaleza",
-  "solució",
+  "solucion",
   "chocolate",
-  "química",
+  "quimica",
   "frutas",
   "pintura",
   "felicidad",
@@ -47,8 +47,8 @@ const palabras = [
   "leer",
   "poesía",
   "oceano",
-  "fotografía",
-  "tecnología",
+  "fotografia",
+  "tecnologia",
 ];
 const pistas = [
   "Instrumento de cuerdas, ampliamente utilizado en música clásica.",
